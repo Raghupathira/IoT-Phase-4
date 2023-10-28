@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Environmental Monitoring in parks</title>
+    <style>
+        body {
+            font-family: "Amazon Ember", Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #232f3e;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .header h1 {
+            color: #ec7211; /* Bright orange color */
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.2s;
+            margin: 10px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .iframe {
+            border: none;
+            width: 100%;
+            height: 300px;
+        }
+        h1, h2 {
+            color: #111;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Environmental Monitoring in Parks</h1>
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>Temperature</h2>
+            <iframe class="iframe" src="https://thingspeak.com/channels/2307255/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+        <div class="card">
+            <h2>Humidity</h2>
+            <iframe class="iframe" src="https://thingspeak.com/channels/2307255/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+        </div>
+        <div class="card">
+            <h2>Channel Location</h2>
+            <iframe class="iframe" src="https://thingspeak.com/channels/2307255/maps/channel_show"></iframe>
+        </div>
+    </div>
+</body>
+</html>
+
